@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --Gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+  --font-Raleway: "Raleway", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-Raleway);
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--VeryDarkBlue);
+  background-image: url("../images/bg-desktop.png");
+  background-size: 100% 50vh;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STORAGE */
+.storage {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ICONS STORAGE */
+.storage__icons {
+  background-color: var(--DarkBlue);
+  width: 100%;
+  padding: 3rem;
+  border-radius: 0.625rem 5rem 0.625rem 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1 1 0;
+}
+
+.storage__icons-items {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.storage__icons-items picture {
+  background-color: var(--VeryDarkBlue);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+}
+
+/* BAR STORAGE */
+.storage__bar {
+  width: 100%;
+  background-color: var(--DarkBlue);
+  color: var(--PaleBlue);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  flex: 2 1 0;
+  border-radius: 0.625rem;
+  padding: 2.5rem;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.storage__bar-description span {
+  font-weight: 700;
+}
+
+.storage__bar-bar {
+  height: 2rem;
+  background-color: var(--VeryDarkBlue);
+  border-radius: 1rem;
+  padding: 0.3125rem;
+}
+
+.bar__content {
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(to right, var(--Gradient));
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.3125rem;
+}
+
+.bar__content-circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--PaleBlue);
+  border-radius: 50%;
+}
+
+.storage__bar-storage {
+  margin-top: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BALLOON */
+.balloon {
+  position: absolute;
+  right: 2.5rem;
+  top: -3.5rem;
+  background-color: var(--PaleBlue);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.balloon__item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.balloon__item-number {
+  color: var(--VeryDarkBlue);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.balloon__item-text {
+  color: var(--GrayishBlue);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.balloon__triangle {
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+  border-right: 3rem solid var(--PaleBlue);
+  border-bottom: 3em solid transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .storage {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .balloon {
+    right: 50%;
+    transform: translateX(50%);
+    top: 90%;
+  }
+
+  .balloon__triangle{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+  }
+}
