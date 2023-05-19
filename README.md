@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [CODE](https://github.com/AngelDev2001/Fylo-data-storage-component---AngelDev2001.git)
-- Live Site URL: [DEMO](https://github.com/AngelDev2001/Fylo-data-storage-component---AngelDev2001.git/)
+- Live Site URL: [DEMO](https://angeldev2001.github.io/Fylo-data-storage-component---AngelDev2001/)
 
 ## My process
 
